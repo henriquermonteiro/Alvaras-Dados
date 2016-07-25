@@ -23,7 +23,7 @@ public abstract class ResponsibilityChain<T> {
 
     public abstract T change(T input);
 
-    public T process(T input) {
+    public final T process(T input) {
         T ret = change(input);
         
         if (chain != null) {
